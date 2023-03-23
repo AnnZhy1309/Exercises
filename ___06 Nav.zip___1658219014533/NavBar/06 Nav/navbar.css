@@ -1,0 +1,48 @@
+:root{
+    --grey:rgb(60, 57, 57);
+    background-color: var(--grey);
+}
+
+
+#searchbutton:hover{
+    background: green;
+    color: white;
+}
+
+.navbar{
+    background-color: var(--grey);
+    color: white;
+    position: sticky;
+    top: 0px;
+    max-inline-size: none;
+}
+#navbarword{
+    font-size: 1.3rem;
+    ;
+}
+#home{
+    text-decoration: none;
+    color: white;
+}
+#link{
+    text-decoration: none;
+    color: white;
+}
+#dropdown{
+    background-color:var(--grey);
+    color: white;
+    border: 0px;
+}
+#disabled{
+    background-color:var(--grey);
+    color: gray;
+    border: 0px;
+}
+#searchbutton{
+    color:green;
+    background-color: var(--grey);
+    border: 1px solid green;
+}
+.page{
+    max-inline-size: 768px;
+}
