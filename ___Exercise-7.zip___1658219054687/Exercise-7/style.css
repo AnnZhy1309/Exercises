@@ -1,0 +1,56 @@
+body {
+  width: 60em;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 150px 300px 300px 150px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "gr gr gr"
+  "ye re bl"
+  "or or bl";
+}
+
+section {
+  padding: 2em;
+  margin: 1em;
+  display: grid;
+}
+
+#green {
+  background-color: #8ffda7;
+  grid-area: gr;
+}
+
+#orange {
+  background-color: #ffc788;
+  grid-area: or;
+}
+
+#yellow {
+  background-color: #ffff92;
+  grid-area: ye;
+}
+
+#red {
+  background-color: #ff919c;
+  grid-area:re;
+}
+
+#blue {
+  background-color: #98d2ff;
+  grid-area: bl;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  padding: 1em;
+  display: block;
+  margin: 1em;
+}
+ul{
+  display: flex;
+}
