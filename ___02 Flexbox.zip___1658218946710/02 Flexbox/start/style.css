@@ -1,0 +1,32 @@
+#sidebar{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+}
+.links{
+    color: #2b2b2b;
+}
+li:hover{
+    color:#2b2bb2;
+    transition: 0.3s;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+#avatar{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border: 1px solid grey;
+    align-self: center;
+    justify-content: flex-end;
+    margin-top: 320px;
+}
+#username{
+    align-self: center;
+}
