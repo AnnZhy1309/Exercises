@@ -1,0 +1,70 @@
+body {
+  width: 60em;
+  margin: 0 auto;
+  display: flex;
+}
+
+section {
+  padding: 2em;
+  margin: 1em;
+  display: grid;
+  grid-template-rows: 100px 100px 80px 200px 80px;
+  grid-template-columns: 1fr;
+}
+
+section #green {
+  grid-row-start: ;
+  background-color: #8ffda7;
+  width: 80px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+section #orange {
+  background-color: #ffc788;
+  width: 200px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+section #yellow {
+  background-color: #ffff92;
+  width:100px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+section #red {
+  background-color: #ff919c;
+  width: 100px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+section #blue {
+  background-color: #98d2ff;
+  width:80px;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  padding: 1em;
+  display: block;
+  margin: 1em;
+}
