@@ -1,19 +1,26 @@
 :root{
     opacity: 0.5;
+    --orange: #ff8800;
+    --purple:rgb(153, 153, 239, 1 );
+    --black:#011212;
+    --ball-width: 100px;
+    --ball-height: 100px;
+    --font: "New Times Roman";
+
 }
 
 body {
-    background-color: #011212;
-    color: rgb(153, 153, 239, 1 );
+    background-color: var(--black);
+    color: var(--purple);
     text-align: center;
-    font-family: "New Times Roman";
+    font-family: var(--font);
     line-height: 1.5;
 }
 
 .ball {
-    width: 100px;
-    height: 100px;
-    background-color: #ff8800;
+    width: var(--ball-width);
+    height: var(var(--ball-height));
+    background-color: var(--orange);
     border-radius: 50px;
 }
 
