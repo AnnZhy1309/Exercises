@@ -12,6 +12,7 @@
 .navbar{
     background-color: var(--grey);
     color: white;
+    width: 100vw;
     position: sticky;
     top: 0px;
     max-inline-size: none;
@@ -45,4 +46,9 @@
 }
 .page{
     max-inline-size: 768px;
+}
+@media (max-width: 768px){
+    section{
+        display: none;
+    }
 }
