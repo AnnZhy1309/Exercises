@@ -1,0 +1,27 @@
+div {
+  border: solid 1px red;
+  padding: 10px;
+}
+div h1 {
+  color: green;
+  text-decoration: underline;
+  text-align: center;
+}
+div section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  text-align: center;
+}
+div section article {
+  border: 1px solid green;
+  padding: 15px;
+}
+div section article :nth-child(3), div section article :first-child {
+  color: red;
+}
+div section article :nth-child(2), div section article :last-child {
+  color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */

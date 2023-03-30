@@ -1,0 +1,37 @@
+
+$color-primary: red;
+$color-secondary:blue;
+$color-tertiary: green;
+
+div{
+    border: solid 1px $color-primary;
+    padding: 10px;
+    h1{
+    color: $color-tertiary;
+    text-decoration: underline;
+    text-align: center;
+    }
+    section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+
+     article{
+    border: 1px solid $color-tertiary;
+    padding: 15px;
+
+         :nth-child(3), :first-child{
+    color: $color-primary;
+    }
+        :nth-child(2), :last-child{
+    color: $color-secondary;
+    }
+    }
+    }
+}
+
+
+
+
+
