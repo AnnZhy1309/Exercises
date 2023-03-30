@@ -23,9 +23,8 @@ section{
     width: 150px;
     height: 150px;
     border: 1px solid grey;
-    align-self: center;
-    justify-content: flex-end;
-    margin-top: 320px;
+    justify-content: center;
+    align-content: flex-end;
 }
 #username{
     align-self: center;
