@@ -10,7 +10,7 @@ body{
     justify-content: space-evenly;
 }
 @media (max-width: 375px){
-    div{
+    body{
         display: flex;
         flex-direction: column;
     }
