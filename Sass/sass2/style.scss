@@ -1,0 +1,44 @@
+div{
+    border: 1px solid red;
+    gap: 15px;
+    display: grid;
+    grid-template-rows: 60px 120px 120px;
+
+    h1{
+        text-align: center;
+        color: green;
+        text-decoration: underline 1px purple;
+        padding-bottom: 15px;
+    }
+    section{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    width:100%;
+    article{
+        border: 1px solid green;
+        width: 100%;
+        text-align: center;
+        p{
+            margin: 10px;
+        }
+    }
+    }
+}
+
+#section1{
+    :first-child, :nth-child(3){
+        color: red;
+    }
+    :last-child, :nth-child(2){
+        color:blue;
+    }
+}
+
+#section2{
+    border: 1px solid blue;
+    color:green;
+    font-size: larger;
+    display: flex;
+    align-content: center;
+}
