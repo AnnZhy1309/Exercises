@@ -1,6 +1,6 @@
 div{
     border: 1px solid red;
-    gap: 15px;
+    padding: 15px; 
     display: grid;
     grid-template-rows: 60px 120px 120px;
 
@@ -28,12 +28,13 @@ div{
 
 #section1{
     :first-child, :nth-child(3){
-        color: red;
+        color: blue;
     }
-    :last-child, :nth-child(2){
-        color:blue;
+       :last-child, :nth-child(2){
+        color:red;
     }
 }
+
 
 #section2{
     border: 1px solid blue;

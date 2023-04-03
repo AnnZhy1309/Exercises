@@ -1,6 +1,6 @@
 div {
   border: 1px solid red;
-  gap: 15px;
+  padding: 15px;
   display: grid;
   grid-template-rows: 60px 120px 120px;
 }
@@ -26,10 +26,10 @@ div section article p {
 }
 
 #section1 :first-child, #section1 :nth-child(3) {
-  color: red;
+  color: blue;
 }
 #section1 :last-child, #section1 :nth-child(2) {
-  color: blue;
+  color: red;
 }
 
 #section2 {
