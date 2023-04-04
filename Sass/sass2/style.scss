@@ -1,3 +1,13 @@
+@mixin color ($color){
+    color: $color;
+}
+@mixin border ($color){
+    border: 1px solid $color;
+}
+@mixin font-size ($size){
+    font-size: $size;
+}
+
 div{
     border: 1px solid red;
     padding: 15px; 
@@ -6,8 +16,8 @@ div{
 
     h1{
         text-align: center;
-        color: green;
-        text-decoration: underline 1px purple;
+        @include color(green);
+        @include border (purple);
         padding-bottom: 15px;
     }
     section{
@@ -16,7 +26,7 @@ div{
     margin: 15px;
     width:100%;
     article{
-        border: 1px solid green;
+        @include border (green);
         width: 100%;
         text-align: center;
         p{
@@ -28,18 +38,18 @@ div{
 
 #section1{
     :first-child, :nth-child(3){
-        color: blue;
+        @include color(blue);
     }
        :last-child, :nth-child(2){
-        color:red;
+        @include color(red);
     }
 }
 
 
 #section2{
-    border: 1px solid blue;
-    color:green;
-    font-size: larger;
+    @include border (blue);
+    @include color (green);
+    @include font-size (larger);
     display: flex;
     align-content: center;
 }
