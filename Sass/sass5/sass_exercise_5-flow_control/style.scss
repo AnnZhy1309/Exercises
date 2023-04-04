@@ -1,0 +1,67 @@
+div{
+    border: 1px red solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & h1{
+        color: green;
+        text-decoration: underline blue 1px;
+    }
+    & h2{
+        @extend h1;
+        padding: 1rem;
+        border: red 1px solid;
+        width: 300px;
+        margin-left:470px; 
+    }
+}
+
+
+#section1{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    width: 96vw;
+    & article{
+        border: 1px green solid;
+        padding: 15px;
+        & :first-child, & :nth-child(3){
+            color: red;
+        }
+        & :last-child, & :nth-child(2){
+            color: blue;
+        }
+    }
+}
+
+#section2{
+    display: flex;
+    justify-content: space-evenly;
+    & div{
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@for $var from 1 to 20 {
+    li:nth-child(#{$index}){
+        background-color: white - $index*10;
+        font-size: 2rem;
+    };
+    @if $var == 10 {
+        background-color: blue;
+        font-size: 2rem;
+        }
+    }
+
+#section3{
+    article{
+    padding-left: 150px;
+    padding-right: 150px;
+    border: 1px blue solid;
+    color: green;
+    margin: 15px;
+    }
+}
