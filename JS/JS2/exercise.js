@@ -1,10 +1,11 @@
-class Person {
+class nicknames {
   constructor (name, age){
     this.name=name;
     this.age=age;
   }
 }
 
+function (nicknameMap){
 const persons = [
   { name: 'Paul', age: 16 },
   { name: 'George', age: 17 },
@@ -17,9 +18,11 @@ const persons = [
   { name: 'Sandra', age: 34 },
   { name: 'Alice', age: 28 }
 ];
-
 for (let i=0; i<persons.length; i++){
   console.log(persons[i]);
+ //let nicknames = function() {return name+ '-' + age}
+  return nicknames;
+}
 }
 
-console.log
+console.log(nicknameMap())
