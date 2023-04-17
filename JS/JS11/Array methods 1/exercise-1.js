@@ -1,6 +1,6 @@
-function adultFilter(persons) {
+//function adultFilter(persons) {
   // ...
-}
+//}
 
 const persons = [
   { name: 'Paul', age: 16 },
@@ -18,3 +18,6 @@ const persons = [
 const adults = adultFilter(persons);
 console.log(persons);
 console.log(adults);
+
+let adultFilter = persons.filter(age=>18);
+console.log(adultFilter);

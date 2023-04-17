@@ -3,5 +3,5 @@ const person = {
   lastName: 'Rossi',
   age: 25
 }
-
-// Print values of person using Object.keys
+let keys = Object.keys;
+console.log(keys);
