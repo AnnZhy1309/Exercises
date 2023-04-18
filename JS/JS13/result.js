@@ -1,12 +1,9 @@
 function calculateAverageAge(persons) {
-    //let commonAge = persons.reduce ((a.age, b.age)=>a+b);
-    //let devide = (commonAge, arr.length) => a/b;
-    //return devide;
-    let totalAge = persons.age.reduce ((a, b)=>a+b);
-    return totalAge;
-
+    const theAge = persons.map ((el)=> el.age);
+    let totalAge = theAge.reduce((a, b)=> a+b);
+    return totalAge/persons.length;
 }
-  
+
   const persons = [
     { name: 'Paul', age: 16 },
     { name: 'George', age: 17 },
@@ -19,8 +16,14 @@ function calculateAverageAge(persons) {
     { name: 'Sandra', age: 34 },
     { name: 'Alice', age: 28 }
   ];
+
+  //const theAge = persons.map ((el)=> el.age);
+  
+  //let average = theAge => theAge.reduce((a, b)=> a+b)/persons.length;
+
+  //console.log(average);
+
   
   const average = calculateAverageAge(persons);
   console.log(persons);
   console.log(average);
-  
