@@ -1,5 +1,5 @@
 function uncompletedNotes(notes) {
-  // ...
+  let unfinished = 
 }
 
 const notes = [
