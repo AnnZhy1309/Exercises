@@ -1,5 +1,6 @@
 function isAdult(person) {
-    return person.age >= 18;
+    let isAdult = true;
+    return isAdult;
   }
   
   const person = {
