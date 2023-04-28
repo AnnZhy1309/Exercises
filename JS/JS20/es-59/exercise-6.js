@@ -18,8 +18,17 @@ class Circle {
 }
 
 class AreaCalculator {
-  // ...
+  static calculate (square){
+    return Square.side * Square.side;
+  }
+  static calculate (rectangle){
+    return Rectangle.side * Rectangle.side;
+  }
+  static calculate (circle){
+    return Circle.radius * Circle.radius * 3.14;
+  }
 }
+
 
 const square = new Square(4);
 const rectangle = new Rectangle(4, 2);
