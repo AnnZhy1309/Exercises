@@ -1,47 +1,52 @@
 class Person {
-    constructor (firstName, lastName, age){
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.age = age;
+  constructor (firstName, lastName,age){
+    this.thefirstName = firstName;
+    this.thelastName = lastName;
+    this.theage = age;
+  }
+  set age(years){
+    if(years<1){
+      this.theage = 1;
+    }else if (years>110){
+      this.theage = 110;
+    }else{
+      this.theage = years;
     }
-      set firstName(nn){
-        if (nn.length<1){
-          console.log("Enter a valid name");
-        }
-        this._firstName = nn;
-      }
-  
-      set lastName(nl){
-        if (nl.length<1){
-          console.log("Enter a valid name");
-        }
-        this._lastName = nl;
-      }
-  
-      set age(na){
-        if (na<1){
-          this._age = 1
-        }else if (na>100){
-          this._age = 100;
-        }else{
-          this._age = na;
-        }
-      }
-    
-      get firstName(){
-        return this._firstName
-      };
-      get lastName(){
-        return this._lastName
-      };
-      get age(){
-        return this._age
-      };
+  }
+  get age(){
+    return this.theage;
+  }
+
+  set firstName(fn){
+    if (fn === ''){
+       console.log("Enter a first name");
+    }
+    this.firstName = fn;
+  }
+  get firstName(){
+    return this.thefirstName;
+  }
+  set lastName(ln){
+    if (fn === ''){
+       console.log("Enter a last name");
+    }
+    this.lastName = ln;
+  }
+  get lastName(){
+    return this.thelastName;
+  }
+
+  get fullName(){
+    let fullname = this.firstName + ' ' + this.lastName;
+    return fullname;
+  }
+
   }
   
   const person = new Person('Mario', 'Rossi', 25);
   console.log(person.fullName);
   
-  person.firstName = 'Maria';
-  person.lastName = 'Verdi';
+  person.thefirstName = 'Maria';
+  person.thelastName = 'Verdi';
   console.log(person.fullName);
+  
