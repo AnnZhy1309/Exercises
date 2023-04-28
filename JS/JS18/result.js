@@ -1,7 +1,7 @@
 class Person {
     constructor(firstName, lastName) {
-      this._firstName = firstName;
-      this._lastName = lastName;
+      this.firstName = firstName;
+      this.lastName = lastName;
     }
     static fromObject(firstName, lastName){
       let obj = new Person;
@@ -14,5 +14,5 @@ class Person {
   };
   
   const person = Person.fromObject(obj);
-  console.log(obj._firstName + " " + obj._lastName);
+  console.log(obj.firstName + " " + obj.lastName);
   
