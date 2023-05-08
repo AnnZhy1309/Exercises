@@ -1,5 +1,6 @@
 function uncompletedNotes(notes) {
-  let unfinished = 
+  let unfinished = notes.filter((el) el.done = false);
+  return unfinished;
 }
 
 const notes = [
