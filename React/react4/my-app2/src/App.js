@@ -1,10 +1,10 @@
 import React from "react";
-import {Welcome} from "./Welcome";
+import {person} from "./Welcome";
 
 class App extends React.Component{
     render(){
       return(
-        <Welcome name="John"/>
+        person
       )
     }
   }
