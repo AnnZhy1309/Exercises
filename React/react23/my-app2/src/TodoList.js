@@ -1,26 +1,30 @@
 import React from 'react';
+import { useState } from 'react';
 
 
-export class Todos extends React.Component{
+export function Todos (){
     
-    const [items, seiItem] = useState([]);
+ const [items, setItems] = useState([]);
+ const [name, setName] = useState("");
 
-    handlerOnClick =(event)=>{
-        let text = event.target.elements.input.value;
-        items = [...this.items, text]
-    }
+   const handlerOnClick =() => {
+        let itemsNew = [...items, name];
+        setItems(itemsNew);}
 
-    render(){
         return(
             <div>
                <ul>
-                 {this.props.items.map((item) => (
+                 {items.map((item) => (
                     <li>{item}</li>
                  ))}
                </ul>
-               <input name='input' />
+
+               <input type="text" 
+                onChange={(e)=> {
+                let text = e.target.value;
+                setName(text);}} />
+
                <button onClick={handlerOnClick}>Submit</button>
             </div>
         )
-    }
-}
+                }
