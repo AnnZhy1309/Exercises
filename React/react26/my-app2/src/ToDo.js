@@ -7,17 +7,23 @@ export function Todos (){
  const [items, setItems] = useState([]);
  const [name, setName] = useState("");
 
-   const handlerOnClick =(event) => {
-        let itemsNew = [...items, name];
-        setItems(itemsNew);
-        event.preventDefault(); 
-        setItems("")}
+   const handlerOnClick =() => {
+      let itemsNew = [...items, name];
+      setItems(itemsNew);}
+
+   const deleteItem =(index)=>{
+      let toDelete = [...items];
+      toDelete.splice(index,1);
+      setItems(toDelete);}
 
         return(
             <div>
                <ul>
                  {items.map((item) => (
+                  <div>
                     <li>{item}</li>
+                    <button onClick={()=>{deleteItem()}}>Delete Me</button>
+                  </div>
                  ))}
                </ul>
 
@@ -27,7 +33,4 @@ export function Todos (){
                 setName(text);}} />
 
                <button onClick={handlerOnClick}>Submit</button>
-               <button onClick={}>Remove</button>
-            </div>
-        )
-                }
+            </div>)}
