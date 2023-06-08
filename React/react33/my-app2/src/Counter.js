@@ -1,36 +1,22 @@
-import React from "react";
+import {useEffect, useState} from 'react'
 
-export class Counter extends React.Component{
-   state = {
-     count: this.props.initialValue
-   }
-constructor(props){
-    super(props)
-    setInterval(()=>{
-        this.setState((state)=>{
-            return{
-                count: state.count+this.props.incrementValue
-            }
-        })
-    }, this.props.incrementInterval)
-}
+export function Counter({initialValue=0}){
+    const [counter, setCounter] = useState(initialValue)
 
-   render(){
-    return(
-        <div>
-        <h1>{this.state.count}</h1>
-        </div>
-    )
-   }
-}
-
-export class CounterDisplay extends React.Component{
-    render(){
-        return(
-            <div>
-            <h1>Counter</h1>
-            <Counter incrementInterval={2000} incrementValue={10} initialValue={6}/>
-            </div>
-        )
+    function handleCounterIncrease(){
+        setCounter((c)=> c+1)
     }
+
+    useEffect(()=>{
+        console.log('I have mounted')
+       return ()=>{
+        console.log('I am unmounting')
+       }},[])
+
+    return(
+       <div>
+        <h2>Counter: {counter}</h2>
+        <button onClick={handleCounterIncrease}>Increase</button>
+       </div>
+    )
 }
