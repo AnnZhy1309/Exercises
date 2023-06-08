@@ -1,5 +1,5 @@
 import React from 'react';
-import { LanguageContext } from './LanguageContext';
+import { DisplayLanguage } from './LanguageContext';
 
 const String ={
     en: {welcome_phrase: "Welcome",
@@ -11,14 +11,14 @@ const String ={
 export class Welcome extends React.Component{
     render(){
         return <div>
-            <LanguageContext.Consumer>
+            <DisplayLanguage.Consumer>
               {(language)=>{
                 return <div>
                     <h2>{String[language].welcome_phrase} {this.props.name}!</h2>
                     <p>{String[language].your_age} {this.props.age}</p>
                 </div>
               }}
-        </LanguageContext.Consumer>
+        </DisplayLanguage.Consumer>
         </div>
     }
 }

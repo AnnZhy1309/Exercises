@@ -2,7 +2,7 @@ import React from "react";
 import {Todos} from "./TodoList"
 import { Welcome } from "./Welcome";
 import { Age } from "./Welcome";
-import { LanguageContext } from "./LanguageContext";
+import { DisplayLanguage } from "./LanguageContext";
 
 
 
@@ -25,9 +25,9 @@ export class App extends React.Component{
           <option value='en'>English</option>
           <option value='ru'>Русский</option>
         </select>
-        <LanguageContext.Provider value={this.state.language}>
+        <DisplayLanguage.Provider value={this.state.language}>
            <Welcome name="Albert" age={30}/>
-        </LanguageContext.Provider>
+        </DisplayLanguage.Provider>
       </div>
     )
   }
