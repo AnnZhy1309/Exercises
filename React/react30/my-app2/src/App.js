@@ -1,6 +1,6 @@
 import React from "react";
 import {Todos} from "./TodoList"
-
+import { Counter } from "./Counter2";
 
 
 class App extends React.Component{
@@ -9,7 +9,7 @@ class App extends React.Component{
   render(){
     return(
       <div>
-         <Todos />
+         <Counter initialValue={1} />
       </div>
     )
   }
