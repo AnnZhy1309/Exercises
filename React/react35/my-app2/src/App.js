@@ -1,18 +1,12 @@
-import React from "react";
-import {Todos} from "./TodoList"
+import React from 'react'
+import { GithubUserList, GithubUser } from "./GHfetch";
+import { useState } from 'react'
 
 
 
-class App extends React.Component{
-
-  
-  render(){
-    return(
-      <div>
-         <Todos />
-      </div>
-    )
-  }
-}
+export function App(){
+ return(
+        <GithubUserList/>    
+)}
 
   export default App
