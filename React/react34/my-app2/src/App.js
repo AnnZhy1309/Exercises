@@ -1,5 +1,6 @@
 import React from "react";
 import {Todos} from "./TodoList"
+import { GithubUser } from "./GHfetch";
 
 
 
@@ -9,7 +10,7 @@ class App extends React.Component{
   render(){
     return(
       <div>
-         <Todos />
+         <GithubUser username="AnnZhy1309"/>
       </div>
     )
   }
