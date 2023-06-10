@@ -1,12 +1,12 @@
 import React from 'react'
 import { GithubUserList, GithubUser } from "./GHfetch";
-import { useState } from 'react'
+import { MyForm } from './Hooks2'
 
 
 
 export function App(){
  return(
-        <GithubUserList/>    
+        <MyForm/>    
 )}
 
   export default App
