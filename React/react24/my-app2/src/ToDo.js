@@ -2,17 +2,21 @@ import React from 'react';
 import { useState } from 'react';
 
 
-export function Todos (){
+export function Todos (props){
     
  const [items, setItems] = useState([]);
  const [name, setName] = useState("");
-
-   const handlerOnClick =(event) => {
+ const[count, setCount] = useState(0);
+    
+   function Counter(){
+      setInterval(()=>{
+         setCount((c)=>c+1)
+      }, 1000)
+   }
+   const handlerOnClick =() => {
         let itemsNew = [...items, name];
         setItems(itemsNew);
-        event.preventDefault(); 
-        setItems("")}
-
+        }
         return(
             <div>
                <ul>
@@ -21,12 +25,13 @@ export function Todos (){
                  ))}
                </ul>
 
-               <input type="text" 
+               <input type="text" id="theinput"
                 onChange={(e)=> {
                 let text = e.target.value;
                 setName(text);}} />
 
                <button onClick={handlerOnClick}>Submit</button>
+               <h3>Counter: {count}</h3>
             </div>
         )
                 }

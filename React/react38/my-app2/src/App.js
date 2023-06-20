@@ -1,12 +1,11 @@
 import React from 'react'
-import { GithubUserList, GithubUser } from "./GHfetch";
-import { useState } from 'react'
+import { GithubUser } from "./GHfetch";
 
 
 
 export function App(){
  return(
-        <GithubUserList/>    
+        <GithubUser username="AnnZhy1309"/>    
 )}
 
   export default App
