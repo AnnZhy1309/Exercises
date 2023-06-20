@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import {useState, useCallback} from 'react'
+
 
 export function useCounter(initialValue=0){
     const[counter, setCounter] = useState(initialValue)
@@ -11,7 +12,7 @@ export function useCounter(initialValue=0){
     }, [])
     const handleCounterReset = useCallback(function handleCounterReset(){
         setCounter(initialValue)
-    },[])
+    },[initialValue])
 
     return({
         counter: counter,
