@@ -1,12 +1,11 @@
 import React from 'react'
-import { GithubUserList, GithubUser } from "./GHfetch";
-import { useState } from 'react'
+import { FilteredList } from './FilteredList';
 
 
 
 export function App(){
  return(
-        <GithubUserList/>    
+        <FilteredList/> 
 )}
 
   export default App
