@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import {useParams} from 'react-router-dom'
 
-export function GithubUser({username}){
+export function GithubUser(){
     const[data, setData] = useState(null)
+    const {username} = useParams()
 
     useEffect(()=>{
         fetch(`https://api.github.com/users/${username}`)
