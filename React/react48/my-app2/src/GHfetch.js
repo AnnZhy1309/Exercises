@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import {useParams} from 'react-router-dom'
 
-export function GithubUser({username}){
+export function GithubUser(){
+    const{username= "annzhy1309"} = useParams()
     const[data, setData] = useState(null)
 
     useEffect(()=>{
@@ -15,12 +17,12 @@ export function GithubUser({username}){
     }, [username])
 
     return <div>
-        {data && <h1>Hello, {data.name}</h1>}</div>
+        {data && <h1>Hello, {data.name = "User"}</h1>}</div>
 }
 
 export function GithubUserList(){
-const[users, setUser] = useState([]);
 const[inputText, setInputText] = useState([]);
+const [users, setUser] = useState([]);
 
 
   return(
@@ -44,6 +46,24 @@ const[inputText, setInputText] = useState([]);
              setUser(userNew);
           }}>Add user</button>
           
-          <GithubUser username={inputText}/>
     </div>
 )}
+
+
+export function ShowGithubUser(){
+    const{username = "annzhy1309"} = useParams()
+    const[data, setData] = useState(null)
+
+    useEffect(()=>{
+        fetch(`https://api.github.com/users/${username}`)
+        .then ((response)=>{
+            return response.json()
+        })
+        .then ((json)=> {
+            console.log(json)
+            setData(json);
+        })
+    }, [username])
+
+    return <h1>{data.name}</h1>
+}
