@@ -5,13 +5,10 @@ import { useState } from 'react';
 const fetcher = url => username && fetch(url).then (response =>response.json())
 
 export function UseGithubUser(){
-    const {data, error, mutate} = useSWR(`https://api.github.com/users/${username}`, fetcher)
-    function fetchGithubUser(){
-        mutate()
-    }
+    const {data, error} = useSWR(`https://api.github.com/users/${username}`, fetcher)
+    
 
     return <div>
-        <button onClick={fetchGithubUser}>Refetch the data</button>
         {!data && !error && <h3>loading</h3>}
         {error && <h3>ERROR</h3>}
         {data && !error && data.name}
