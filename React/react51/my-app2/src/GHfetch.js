@@ -1,49 +1,25 @@
-import { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
+import useSWR from 'swr';
+import { useState } from 'react';
 
-export function GithubUser({username}){
-    const[data, setData] = useState(null)
+const fetcher = url => username && fetch(url).then (response =>response.json())
 
-    useEffect(()=>{
-        fetch(`https://api.github.com/users/${username}`)
-        .then ((response)=>{
-            return response.json()
-        })
-        .then ((json)=> {
-            console.log(json)
-            setData(json);
-        })
-    }, [username])
+export function UseGithubUser(){
+    const {data, error, mutate} = useSWR(`https://api.github.com/users/${username}`, fetcher)
+    function fetchGithubUser(){
+        mutate()
+    }
 
     return <div>
-        {data && <h1>Hello, {data.name}</h1>}</div>
+        <button onClick={fetchGithubUser}>Refetch the data</button>
+        {!data && !error && <h3>loading</h3>}
+        {error && <h3>ERROR</h3>}
+        {data && !error && data.name}
+    </div>;
 }
 
-export function GithubUserList(){
-const[users, setUser] = useState([]);
-const[inputText, setInputText] = useState([]);
+export function GithubUser({username}){
+    const user = UseGithubUser(username)
+    return <h1>Hello, {user}</h1>;
+}
 
-
-  return(
-    <div>
-       <ul>
-          {users.map((user)=>(
-                <li>{user}</li>
-          ))}
-              
-          </ul>
-          <input
-          name="username"
-              value={inputText}
-              onChange={(ev)=>{
-              let text = ev.target.value;
-              setInputText(text);}
-          } type="text"/>
-          <button
-             onClick={()=>{
-             let userNew = [...users, inputText];
-             setUser(userNew);
-          }}>Add user</button>
-          
-          <GithubUser username={inputText}/>
-    </div>
-)}
